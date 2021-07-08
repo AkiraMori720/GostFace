@@ -6,7 +6,7 @@ export default {
     secondary: '#3E4356',
 
     backgroundPrimary: '#FFFFFF',
-    backgroundSecondary: '#EEEEEE',
+    backgroundSecondary: '#000000',
 
     inputBg: '#F5F5F5',
     placeholder: '#999999',

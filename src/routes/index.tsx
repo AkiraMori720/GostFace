@@ -2,10 +2,13 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
 import Home from '../pages/Home';
+import Dashboard from '../pages/Dashboard';
+import AppRoute from "~/routes/route";
 
 const Routes: React.FC = () => (
   <Switch>
-    <Route path="/" exact component={Home} />
+    <AppRoute path="/dashboard" component={Dashboard} layout={'dashboard'}/>
+    <AppRoute path="/" component={Home} layout={'home'}/>
   </Switch>
 );
 

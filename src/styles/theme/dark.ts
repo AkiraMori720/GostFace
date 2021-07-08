@@ -5,8 +5,8 @@ export default {
     primary: '#FFCC73',
     secondary: '#717894',
 
-    backgroundPrimary: '#141419',
-    backgroundSecondary: '#19191F',
+    backgroundPrimary: '#000000',
+    backgroundSecondary: '#ffffff',
 
     inputBg: '#202020',
     placeholder: '#999999',

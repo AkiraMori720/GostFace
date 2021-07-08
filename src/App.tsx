@@ -6,23 +6,15 @@ import usePersistedState from './utils/usePersistedState';
 import Routes from './routes';
 
 import GlobalStyle from './styles/global';
-import light from './styles/theme/light';
 import dark from './styles/theme/dark';
 
-import Header from './components/Header';
-
 const App: React.FC = () => {
-  const [theme, setTheme] = usePersistedState<DefaultTheme>('theme', light);
-
-  const toggleTheme = (): void => {
-    setTheme(theme.title === 'light' ? dark : light);
-  };
+  const [theme, setTheme] = usePersistedState<DefaultTheme>('theme', dark);
 
   return (
     <ThemeProvider theme={theme}>
       <BrowserRouter>
         <GlobalStyle />
-        <Header toggleTheme={toggleTheme} />
         <Routes />
       </BrowserRouter>
     </ThemeProvider>

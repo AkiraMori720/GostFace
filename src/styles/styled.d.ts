@@ -12,7 +12,7 @@ declare module 'styled-components' {
       backgroundSecondary: string;
 
       theme: string;
-      themeBg: sting;
+      themeBg: string;
 
       inputBg: string;
       placeholder: string;
