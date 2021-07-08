@@ -1,1 +1,0 @@
-React & TypeScript & Styled Component
