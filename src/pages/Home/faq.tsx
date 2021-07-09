@@ -9,7 +9,7 @@ interface Props {
 const Faq: React.FC<Props> = ({index, question, answer}) => {
   const [show, setShow] = useState(false);
   return (
-    <div key={index}>
+    <div>
       <button className="faq" onClick={() => setShow(!show)}>
         <span className="faq-mark">Q{index}:</span>
         {question}

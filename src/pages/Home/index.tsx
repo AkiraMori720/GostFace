@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 
 import * as S from './styles';
 import Faq from "~/pages/Home/faq";
@@ -87,6 +87,16 @@ const faqs = [
 ]
 
 const Home: React.FC = () => {
+  useEffect(() => {
+
+    const script = document.createElement("script");
+
+    script.src = "/js/scroll.js";
+    script.async = true;
+
+    document.body.appendChild(script);
+  });
+
   return (
     <S.Container>
 
@@ -113,7 +123,7 @@ const Home: React.FC = () => {
                 </div>
               </div>
             </div>
-            <div className="col-xl-6 col-lg-6 img-main scroll slide-right scrolled">
+            <div className="col-xl-6 col-lg-6 img-main">
               <img src="/images/main_t.png" alt="Ghost Face Icon" className="img-fluid"/>
             </div>
           </div>
@@ -187,7 +197,7 @@ const Home: React.FC = () => {
 
       <S.Section id="features" className="features">
         <S.Content className="col-sm-12 col-md-11 col-lg-10 col-xl-9 py-16">
-          <div className="row scroll fade-in-bottom scrolled">
+          <div className="row scroll fade-in-bottom">
             <div className="col-lg-12 col-xl-12 text-center text-lg-left mb-4 mb-md-5 mb-lg-0">
               <div className="text-center">
                 <h2 className="title">FEATURES</h2>
@@ -224,19 +234,36 @@ const Home: React.FC = () => {
 
       <S.Section id="tokenomics" className="tokenomics">
         <div className="tokenomics-back">
-          <S.Content className="col-sm-12 col-md-11 col-lg-10 col-xl-9 py-16">
-            <div className="row justify-content-between align-items-center">
-              <div
-                className="col-xl-12 col-lg-12 text-center text-lg-left mb-4 mb-md-5 mb-lg-0 scroll slide-right scrolled">
-                <img src="/images/scareonomics__.png" alt="Icon for Tokenomics" className="img-fluid"/>
+          <S.Content className="col-sm-12 col-md-11 col-lg-10 col-xl-9 py-16 scroll fade-in-bottom">
+            <div className="row align-items-center">
+              <div className="text-center">
+                <h2 className="title">SCAREONOMICS</h2>
+                <img src="/images/scareonomics__.png" alt="Icon for Tokenomics" className="scarenomics-img"/>
+                <div className="text-center scare-1">
+                  <label className="scare-1-text">Total Supply: <br/><span>1,000,000,000,000</span></label>
+                  <label className="scare-1-text">Presale Allocation: <br/><span>1,000,000,000,000</span></label>
+                </div>
+                <div className="text-center scare-2">
+                  <label className="scare-2-text">Soft Cap: <br/><span>1250BNB</span></label>
+                  <label className="scare-2-text">PancakeSwap: <br/><span>1,000,000,000,000</span></label>
+                </div>
+                <div className="text-center scare-3">
+                  <label className="scare-3-text">Hard Cap: <br/><span>1250BNB</span></label>
+                  <label className="scare-3-text">Liquidity Locked: <br/><span>1,000,000,000,000</span></label>
+                </div>
               </div>
+            </div>
+            <div className="row align-items-center">
+                <div className="col-md-4"><S.Check2SquareIcon size={24}/> 4% Auto Liquidity Acquisition</div>
+                <div className="col-md-4"><S.Check2SquareIcon size={24}/> 4% $BNB Redistribution</div>
+                <div className="col-md-4"><S.Check2SquareIcon size={24}/> 1% $GOSTFACE Redistribution</div>
             </div>
           </S.Content>
         </div>
       </S.Section>
 
       <S.Section id="documents" className="documents">
-        <S.Content className="col-sm-12 col-md-11 col-lg-10 col-xl-9 py-16">
+        <S.Content className="col-sm-12 col-md-11 col-lg-10 col-xl-9 py-16 scroll fade-in-bottom">
           <div className="text-center">
             <h2 className="title">DOCUMENTS</h2>
           </div>
@@ -263,20 +290,20 @@ const Home: React.FC = () => {
       </S.Section>
 
       <S.Section id="roadmap" className="loadmap">
-        <div className="text-center">
+        <div className="text-center scroll fade-in-bottom">
           <img src="/images/roadmap_1.png" alt="loadmap" className="w-full"/>
         </div>
       </S.Section>
 
       <S.Section id="questions" className="questions">
-        <S.Content className="col-sm-12 col-md-11 col-lg-10 col-xl-9 py-16">
+        <S.Content className="col-sm-12 col-md-11 col-lg-10 col-xl-9 py-16 scroll fade-in-bottom">
             <div id="faq" className="col-lg-12 col-xl-12 text-center text-lg-left mb-4 mb-md-5 mb-lg-0">
               <div className="text-center">
                 <h2 className="title">FREQUENTLY ASKED QUESTIONS</h2>
               </div>
             </div>
             {
-              faqs.map((faq, index) => <Faq index={index+1} question={faq.question} answer={faq.answer}/>)
+              faqs.map((faq, index) => <Faq key={index} index={index+1} question={faq.question} answer={faq.answer}/>)
             }
         </S.Content>
       </S.Section>
@@ -284,7 +311,7 @@ const Home: React.FC = () => {
 
 
       <S.Section id="checkout" className="checkout">
-        <S.Content className="col-sm-12 col-md-11 col-lg-10 col-xl-9 py-16">
+        <S.Content className="col-sm-12 col-md-11 col-lg-10 col-xl-9 py-16 scroll fade-in-bottom">
             <div className="text-center">
               <h2 className="title">CHECK IT OUT</h2>
             </div>

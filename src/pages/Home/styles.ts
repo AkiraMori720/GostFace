@@ -6,6 +6,7 @@ import {Telegram} from '@styled-icons/bootstrap/Telegram';
 import {Twitter} from '@styled-icons/bootstrap/Twitter';
 import {EmailOutline} from '@styled-icons/evaicons-outline/EmailOutline';
 import {ChartLine} from '@styled-icons/fa-solid/ChartLine';
+import {Check2Square} from '@styled-icons/bootstrap/Check2Square';
 
 export const Container = styled.div`
   display: flex;
@@ -95,6 +96,92 @@ export const Section = styled.section`
       background-repeat: no-repeat;
       padding: 3rem 6rem 3rem 6rem;
   }
+  .scarenomics-img{
+    width: 1216px;
+  }
+  .scare-1{
+      position: absolute;
+      top: 270px;
+      width: 1216px;
+  }
+  .scare-2{
+      position: absolute;
+      top: 480px;
+      width: 1216px;
+  }
+  .scare-3{
+      position: absolute;
+      top: 690px;
+      width: 1216px;
+  }
+  .scare-1-text{
+      margin: 0 60px;
+  }
+  .scare-2-text{
+      margin: 0 200px;
+  }
+  .scare-3-text{
+      margin: 0 80px;
+  }
+   @media (max-width: 1216px) {
+      .scarenomics-img{
+        width: 900px;
+      }
+      .scare-1{
+          position: absolute;
+          top: 240px;
+          width: 900px;
+      }
+      .scare-2{
+          position: absolute;
+          top: 400px;
+          width: 900px;
+      }
+      .scare-3{
+          position: absolute;
+          top: 550px;
+          width: 900px;
+      }
+      .scare-1-text{
+          margin: 0 30px;
+      }
+      .scare-2-text{
+          margin: 0 140px;
+      }
+      .scare-3-text{
+          margin: 0 50px;
+      }
+  }
+   @media (max-width: 900px) {
+      .scarenomics-img{
+        opacity: 0;
+        width: 100%;
+      }
+      .scare-1{
+          position: absolute;
+          top: 240px;
+        width: 100%;
+      }
+      .scare-2{
+          position: absolute;
+          top: 300px;
+        width: 100%;
+      }
+      .scare-3{
+          position: absolute;
+          top: 360px;
+         width: 100%;
+      }
+      .scare-1-text{
+          margin: 0 10px;
+      }
+      .scare-2-text{
+          margin: 0 10px;
+      }
+      .scare-3-text{
+          margin: 0 10px;
+      }
+  }
   .box-credit {
     background-image: url(/images/sq1_t.png);
   }
@@ -146,7 +233,29 @@ export const Section = styled.section`
   .box-chart{
     background-color: rgb(153, 0, 153) !important;
   }
+  .scrolled.fade-in-bottom {
+    animation: fade-in-bottom 1s ease-in-out both;
+  }
+  .scroll.scrolled {
+      opacity: 1;
+  }
+  .scroll {
+      opacity: 0;
+      transition: opacity .5s;
+  }
+  @keyframes fade-in-bottom {
+    0% {
+        -webkit-transform: translateY(50px);
+        transform: translateY(50px);
+        opacity: 0
+    }
 
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1
+    }
+  }
 `;
 
 export const Content = styled.div`
@@ -180,4 +289,9 @@ export const EmailIcon = styled(EmailOutline)`
 
 export const ChartIcon = styled(ChartLine)`
   color: white;
+`;
+
+export const Check2SquareIcon = styled(Check2Square)`
+   color: #007bff;
+   margin-right: 8px;
 `;

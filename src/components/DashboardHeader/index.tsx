@@ -12,9 +12,11 @@ const Header: React.FC<Props> = ({onConnect}) => {
     <S.Container>
       <S.Content>
         <S.Logo className="float-none">
-          <img src={"/images/logo.png"} alt={"logo"}/>
+          <a href="/">
+            <img src={"/images/logo.png"} alt={"logo"}/>
+          </a>
         </S.Logo>
-        <a className="btn btn-primary get-started-btn" onClick={() =>onConnect()}>Connect</a>
+        <a className="btn btn-primary connect-btn" onClick={() =>onConnect()}>Connect</a>
       </S.Content>
     </S.Container>
   );

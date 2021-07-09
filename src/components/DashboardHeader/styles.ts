@@ -19,7 +19,7 @@ export const Content = styled.div`
     margin: 0 20px;
   }
 
-  a{
+  .connect-btn {
     margin-left: 25px;
     border-radius: 50px;
     padding: 6px 25px 7px;

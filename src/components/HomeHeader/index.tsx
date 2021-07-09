@@ -25,7 +25,9 @@ const Header: React.FC<Props> = () => {
           </li>
         </ul>
         <S.Logo className="float-none">
-          <img src={"/images/logo.png"} alt={"logo"}/>
+          <a href="/">
+            <img src={"/images/logo.png"} alt={"logo"}/>
+          </a>
         </S.Logo>
         <ul className="nav justify-content-center nav-fill w-full">
           <li className="nav-item p-1">
